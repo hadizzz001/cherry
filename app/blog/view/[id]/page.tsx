@@ -47,7 +47,7 @@ const EditBlog = ({ params }: { params: { id: string } }) => {
 
   const getBlogById = async (id: string) => {
     // const res = await fetch(`http://localhost:3000/api/blog/${id}`);
-    const res = await fetch((lang === 'en') ? `http://localhost:3000/api/blog/${id}` : `http://localhost:3000/api/blogs/${id}`);
+    const res = await fetch((lang === 'en') ? `/api/blog/${id}` : `/api/blogs/${id}`);
     const data = await res.json();
     return data.post;
   };
