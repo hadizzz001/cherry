@@ -1,5 +1,5 @@
 "use client"
-import { CarCard, Hero1, ImageDisplay } from '@/components'
+import { CarCard, Hero1 } from '@/components'
 import { fetchTemp, fetchTemp1 } from '@/utils'
 import { useEffect, useState } from 'react'
 import { useDrawerContext } from 'app/context/store';
