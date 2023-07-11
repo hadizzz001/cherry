@@ -1,5 +1,5 @@
 
-import { Navbar2, Footer } from '@/components'  
+import { Navbar2, Footer, ImageDisplay } from '@/components'  
 import './globals.css' 
 import { useSearchParams } from 'next/navigation'
 import ContextWrapper from './context/store';
@@ -23,7 +23,8 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <body className="relative"> 
+      <body className="relative">  
+      
       <ContextWrapper>
         <Navbar2/>
         {children}

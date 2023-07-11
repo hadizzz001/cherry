@@ -7,32 +7,30 @@ import { Autoplay } from 'swiper';
 import { useState, useEffect } from 'react';
 import Testimonial from '@/components/Testimonial';
 import { useDrawerContext } from './context/store';
-import useLocalStorage from '@/hooks/useLocalStorage'
+import useLocalStorage from '@/hooks/useLocalStorage' 
+  
+ 
 
 
-export default async function Home() {
+export default  function Home() {
 
   const { open, setOpen } = useDrawerContext()
 
-  const [allTemp, setTemp] = useState<any>()
-  const a = async () => {
-    // const allTemp = await fetchTemp();
-    let allTemp
-    allTemp =  (lang === 'en') ? await fetchTemp() : await fetchTemp1()
+  const [allTemp, setTemp] = useState<any>() 
 
-    const isDataEmpty = !Array.isArray(allTemp) || allTemp.length < 1 || !allTemp;
-    if (!isDataEmpty) { setTemp(allTemp) }
+  const a = async () => {   
+   const b = await fetchTemp() 
+   setTemp(b)
   }
   useEffect(() => {
     a()
   }, [])
 
-
   const [value, setValue] = useLocalStorage("lang", "")
   const [lang, setLang] = useState(value)
 
   return (
-    <main className="overflow-hidden">
+    <main  className="overflow-hidden"> 
       <Hero />
 
       <div className='mt-12 padding-x padding-y max-width' id='discover'>
