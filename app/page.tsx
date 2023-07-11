@@ -19,7 +19,7 @@ export default  function Home() {
   const [allTemp, setTemp] = useState<any>() 
 
   const a = async () => {   
-   const b = await fetchTemp() 
+   const b = (lang === 'en') ? await fetchTemp() : await fetchTemp1()
    setTemp(b)
   }
   useEffect(() => {
