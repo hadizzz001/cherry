@@ -1,5 +1,5 @@
 
-import { Navbar2, Footer, ImageDisplay } from '@/components'  
+import { Navbar2, Footer } from '@/components'  
 import './globals.css' 
 import { useSearchParams } from 'next/navigation'
 import ContextWrapper from './context/store';
